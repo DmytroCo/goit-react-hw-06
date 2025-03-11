@@ -1,23 +1,22 @@
-import { useDispatch } from "react-redux";
-import css from "./Contact.module.css";
-import { deleteContact } from "../../redux/contactsSlice";
+import React from 'react'
+import styles from "./Contact.module.css";
+import { FaUser, FaPhone } from "react-icons/fa";
+import { useDispatch } from 'react-redux';
+import { deleteContact } from '../../redux/contactsSlice';
 
-export default function Contact({ data }) {
-  const dispatch = useDispatch();
+const Contact = ({name, number, id}) => {
+const dispatch = useDispatch()
   return (
-    <div className={css.contactBox}>
-      <ul className={css.contactList}>
-        <li>{data.name}</li>
-        <li>{data.number}</li>
-      </ul>
-      <button
-        onClick={() => {
-          dispatch(deleteContact(data.id));
-        }}
-        className={css.deleteButton}
-      >
-        Delete
-      </button>
-    </div>
-  );
+    <li className={styles.li}>
+    <div className={styles.div}>
+  
+      <p className={styles.p} ><FaUser className={styles.icon} />{ name}</p>
+      
+      <p className={styles.p}><FaPhone className={styles.icon} />{number }</p>
+          <button onClick={() => dispatch(deleteContact(id))} className={styles.button} >Delete</button>
+      </div>
+    </li>
+  )
 }
+
+export default Contact

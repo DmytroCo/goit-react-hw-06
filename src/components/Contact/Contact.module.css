@@ -1,33 +1,40 @@
-.contactBox {
-    display: flex;
-    flex-direction: column;
-    border: 2px solid #bb7364;
-    border-radius: 4px;
-    padding: 12px;
-    min-width: 160px;
+.button {
+  background-color: #01005F;
+  color: white;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
 }
 
-.contactList {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    margin-bottom: 12px;
+.p {
+  font-size: 20px;
+  font-weight: bold;
 }
 
-.deleteButton {
-    font-size: 16px;
-    padding: 8px;
-    width: 80px;
-    border: 2px solid #bb7364;
-    border-radius: 4px;
-    background-color: #ffc8bd;
-    transition: border 300ms ease-in-out, background-color 300ms ease-in-out,
-        font-weight 300ms ease-in-out;
+.icon {
+  margin-right: 5px;
+  font-size: 1.2em;
+  vertical-align: middle;
+  margin-right: 5px;
 }
 
-.deleteButton:hover,
-.deleteButton:focus {
-    border: 2px solid #854234;
-    background-color: #ffe8e3;
-    font-weight: 600;
+.li {
+  display: flex;
+  list-style-type: none;
+  border: 3px solid;
+  border-color: #01005F;
+  border-radius: 10px;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 calc(25% - 20px);
+  max-width: 192px;
+  margin: 0 auto;
 }
